@@ -37,7 +37,7 @@ function App() {
               padding={10}
               style={{
                 fontFamily: '"Fira code", "Fira Mono", monospace',
-                fontSize: 16,
+                fontSize: 12,
                 border: "1px solid #ddd",
                 borderRadius: "5px",
                 height: "100%",
@@ -49,14 +49,12 @@ function App() {
             onClick={reviewCode}
             className="review">Review</div>
         </div>
-        <div className="right">
-          <Markdown
-
-            rehypePlugins={[ rehypeHighlight ]}
-
-          >{review}</Markdown>
-        </div>
-      </main>
+        <div className="right" style={{ fontSize: "14px",color: "white" }}>
+  <Markdown rehypePlugins={[rehypeHighlight]}>
+    {review}
+  </Markdown>
+</div>
+</main>
     </>
   )
 }
