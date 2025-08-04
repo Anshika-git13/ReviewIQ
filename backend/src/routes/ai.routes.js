@@ -1,10 +1,10 @@
 const express = require('express');
-const aiController = require("../controllers/ai.controller")
+const aiController = require("../controllers/ai.controller");
+const auth = require('../middleware/auth');
 
 const router = express.Router();
 
-
-router.post("/get-review", aiController.getReview)
-
+// Protected route - requires authentication
+router.post("/get-review", auth, aiController.getReview);
 
 module.exports = router;    

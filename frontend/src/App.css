@@ -1,63 +1,37 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
-  height: 100%;
-  width: 100%;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-main {
-  height: 100%;
-  width: 100%;
-  padding: 1.5rem;
-  display: flex;
-  gap: 1rem;
+.App {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-main .left,
-main .right {
-  height: 100%;
-  flex-basis: 50%;
-  border-radius: 0.7rem;
+/* Global scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-main .left {
-  background-color: #000000;
-  position: relative;
+::-webkit-scrollbar-track {
+  background: #2d2d2d;
 }
 
-.left .code,
-.code pre,
-.code pre code {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  border-radius: 0.7rem;
-  background-color: #0c0c0c;
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
 }
 
-main .left .review {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  background-color: rgb(219, 219, 255);
-  color: #000000;
-  padding: 0.5rem 2rem;
-  font-weight: 500;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 0.7rem;
-}
-
-
-main .right {
-  background-color: #343434;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  overflow: auto;
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
