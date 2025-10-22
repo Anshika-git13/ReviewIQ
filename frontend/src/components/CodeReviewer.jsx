@@ -24,7 +24,10 @@ function CodeReviewer() {
   async function reviewCode() {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:3000/ai/get-review', { code });
+      const apiUrl = import.meta.env.VITE_API_URL;
+
+      const response = await axios.post(`${apiUrl}/ai/get-review`, { code });
+
       setReview(response.data);
     } catch (error) {
       console.error('Review failed:', error);
