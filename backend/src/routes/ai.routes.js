@@ -5,6 +5,6 @@ const auth = require('../middleware/auth');
 const router = express.Router();
 
 // Protected route - requires authentication
-router.post("/get-review", auth, aiController.getReview);
+router.post("/get-review", aiController.getReview);
 
 module.exports = router;    
